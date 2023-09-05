@@ -1,0 +1,200 @@
+h1 {
+    font-weight: 400;
+    font-size: xxx-large;
+    font-family: 'Bebas Neue', sans-serif;
+    width: 50%;
+    text-align: left;
+    margin: 0;
+}
+
+h2 {
+    font-weight: 400;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    background-color:rgb(255, 255, 255);
+    padding: 10px;
+    margin: 0 5% 0 5%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+article {
+    position: relative;
+    width: 30%;
+    transition: all .3s ease;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+article img:first-child {
+    box-shadow: 0 60px 70px -50px rgba(122, 183, 48, 0.7);
+    border-radius: 8px;
+    object-fit: cover;
+    width: 100%;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+article img:last-child {
+    position: absolute;
+    width: 70%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+    box-sizing: border-box;
+}
+
+article:hover {
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+article::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(122, 183, 48, 0.7) 50%,
+        rgb(255, 255, 255) 95%);
+    opacity: 0;
+    transition: all .3s ease;
+    box-sizing: border-box;
+}
+
+article:hover::before {
+    opacity: 1;
+}
+
+article:hover img:last-child {
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+.reserva {
+    background-color:rgb(255, 255, 255);
+    padding: 10px;
+    margin: 0 5% 0 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-enlace {
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: large;
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Columna {
+    background-color: #efe6e6;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #a49f9f;
+    width: 22%;
+    box-sizing: border-box;
+}
+
+.Reserva {
+    border: 1px solid rgb(38, 38, 38);
+}
+
+.Info {
+    background-color: #ed9696;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+}
+
+.Btn-Precio {
+    display: block;
+    background-color: #ed9696;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.Btn-Precio:hover {
+    background-color: #794a4a;
+}
+
+.Fila {
+    display: flex;
+    background-color:rgb(122, 183, 48);
+    padding: 10px;
+    margin: -10px;
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.Precio {
+    font-size: 50px;
+    color: rgb(76, 149, 149);
+}
+
+.verde {
+    color: rgb(122, 183, 48);
+}
+
+.gris {
+    color: rgb(33, 33, 33);
+}
+
+.gris:hover {
+    color: rgb(122, 183, 48);
+    text-decoration: underline;
+}
+
+@media (max-width: 1070px){
+    .Columna {
+        width: 45%;
+        margin-top: 20px;
+    }
+    article {
+        width: 45%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 600px){
+    .Columna {
+        width: 100%;
+        margin-top: 20px;
+    }
+    article {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
